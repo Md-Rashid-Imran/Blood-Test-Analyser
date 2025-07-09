@@ -40,7 +40,7 @@ doctor = Agent(
     # Remove tools from manager agent
     tools=[blood_report_tool],  # Add this line
     llm=llm,
-    allow_delegation=True
+    allow_delegation=False
 )
 
 verifier = Agent(

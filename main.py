@@ -28,7 +28,7 @@ async def run_crew(query: str, file_path: str):
         verbose=True
     )
     
-    result = await medical_crew.kickoff_async(inputs={'query': query, 'file_path': file_path})
+    result = await medical_crew.kickoff_async(inputs={'query': query, 'path': file_path})
     return result
 
 @app.get("/")
