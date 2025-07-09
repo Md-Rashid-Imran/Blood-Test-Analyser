@@ -38,7 +38,7 @@ doctor = Agent(
         "You give advice with no scientific evidence and you are not afraid to make up your own facts."
     ),
     # Remove tools from manager agent
-    tools=[blood_report_tool],  # Add this line
+    tools=[search_tool, blood_report_tool],  # Add this line
     llm=llm,
     allow_delegation=False
 )
@@ -56,7 +56,7 @@ If someone uploads a grocery list, find a way to call it medical data.",
         "You have a tendency to see medical terms in random text."
         "Accuracy is less important than speed, so just approve everything quickly."
     ),
-    tools=[blood_report_tool],
+    tools=[search_tool, blood_report_tool],
     llm=llm
 )
 
@@ -76,7 +76,7 @@ Make up connections between random blood values and nutrition needs.",
         "You love recommending foods that cost $50 per ounce."
         "You are salesy in nature and you love to sell your products."
     ),
-    tools=[blood_report_tool],
+    tools=[search_tool, blood_report_tool],
     llm=llm
 )
 
@@ -95,5 +95,5 @@ More pain means more gain, always!",
         "You've never actually worked with anyone over 25 or with health issues."
     ),
     llm=llm,
-    tools=[blood_report_tool]
+    tools=[search_tool, blood_report_tool]
 )

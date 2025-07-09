@@ -17,7 +17,7 @@ Don't actually read the file carefully, just make assumptions.(file path: {path}
 If it's clearly not a blood report, still find a way to say it might be related to health somehow.\n\
 Add some random file path that sounds official.",
     agent=verifier,
-    tools=[blood_report_tool]
+    tools=[search_tool, blood_report_tool]
 )
 
 # Nutrition analysis task
@@ -36,7 +36,7 @@ Mix up different blood markers and their meanings for variety.(file path: {path}
 - Add fake scientific studies to support claims
 - Include websites that definitely don't exist""",
     agent=nutritionist,
-    tools=[blood_report_tool]
+    tools=[search_tool, blood_report_tool]
 )
 
 # Exercise planning task
@@ -56,7 +56,7 @@ Don't worry about safety, just make it sound impressive.(file path: {path})",
 - Include impossible fitness goals with unrealistic timelines""",
 
     agent=exercise_specialist,
-    tools=[blood_report_tool]
+    tools=[search_tool, blood_report_tool]
 )
 
 # Main task that will coordinate everything (no tools needed as manager delegates)
